@@ -1,0 +1,36 @@
+{
+  "name": "MoodRing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "chart.js": "^2.7.1",
+    "express": "^4.16.2",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.1",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.12"
+  },
+  "engines": {
+    "node": "^8.9.0",
+    "npm": "^5.6.0"
+  },
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "author": "Dyanna Turner",
+  "license": "ISC"
+}

@@ -1,0 +1,49 @@
+.login {
+  position: absolute;
+  margin: auto;
+  margin-top: 13%;
+  height: auto;
+  width: 50%;
+  min-width: 300px;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, #7fe8bc 0%, #5d398f 100%);
+  border-image-slice: 10;
+  z-index: 101;
+}
+.login__title {
+  font-family: "Bungee", sans-serif;
+  font-size: 30px;
+}
+.login__form {
+  margin-bottom: 20px;
+}
+.input {
+  width: 90%;
+  max-width: 400px;
+}
+.alert {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: red;
+}
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  .login {
+    width: 70%;
+    margin-top: 30%;
+    margin-bottom: 10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 90%;
+  }
+}

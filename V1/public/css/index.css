@@ -1,0 +1,148 @@
+.landing_section {
+  position: relative;
+  z-index: -2;
+  background: url("/images/landing_photo.jpg") no-repeat top;
+  background-size: cover;
+  overflow: hidden;
+  height: 70vh;
+  z-index: -99999;
+}
+.intro_div {
+  margin-top: 120px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid rgba(127, 232, 188, 0.4);
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 500px;
+  width: 500px;
+  padding: 30px;
+}
+.intro_text {
+  font-size: 32px;
+  font-weight: 200;
+  color: black;
+  padding-top: 30%;
+}
+.signup {
+  margin: 1vh auto;
+  width: 90%;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #7fe8bc 0%, #5d398f 100%);
+  border-image-slice: 2;
+  box-shadow: 15px 15px 40px rgba(25, 38, 51, 0.4);
+  display: flex;
+  justify-content: space-around;
+}
+.signup__intro {
+  width: 50%;
+  align-self: center;
+  padding: 30px;
+}
+.signup__title {
+  font-family: "Bungee", sans-serif;
+  font-size: 30px;
+}
+#sign_up_form {
+  padding-top: 10px;
+  display: inline-block;
+  height: 100%;
+}
+#sign_up_form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.sign_up_success,
+.sign_up_failure {
+  height: 100%;
+  font-size: 15px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: red;
+}
+.sign_up_success a,
+#sign_up_title a {
+  text-decoration: none;
+  color: #5d398f;
+}
+.sign_up_success a:hover,
+#sign_up_title a:hover {
+  text-decoration: underline;
+}
+
+.sign_up_submit {
+  margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet Portrait */
+@media screen and (max-width: 900px), screen and (max-height: 900px) {
+  #landing_section {
+    width: 100%;
+    background-position: 40% 60%;
+    height: 100vh;
+  }
+  .intro_div {
+    height: 330px;
+    width: 330px;
+  }
+  .intro_text {
+    padding-top: 20%;
+    font-size: 25px;
+  }
+  .greeting {
+    font-size: 20px;
+  }
+  .bar8 {
+    margin-top: 100vh;
+    z-index: 2000;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px), screen and (max-height: 450px) {
+  .intro_div {
+    margin-top: 110px;
+    height: 275px;
+    width: 275px;
+  }
+  .intro_text {
+    padding-top: 15%;
+    font-size: 20px;
+  }
+  .signup {
+    flex-direction: column;
+  }
+  .signup__intro {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+  .greeting {
+    font-size: 17px;
+  }
+  #sign_up_title {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  #sign_up_form {
+    padding: 10px;
+  }
+  #sign_up_title {
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-height: 375px) {
+  .intro_div {
+    height: 250px;
+    width: 250px;
+  }
+  .intro_text {
+    font-size: 18px;
+  }
+}
