@@ -1,8 +1,8 @@
 ## About
 
-I created a mood tracking app as a part of my fullstack certification. While the requirements of the project was important to the curriculum and certainly taught me a lot, I don't believe it's a good fit for this project anymore. I'm not trying to work in JQuery anymore ^\_^'
+I created a mood tracking app as a part of my fullstack certification. While the requirements of the project was important to the curriculum and certainly taught me a lot, I don't believe it's a good fit for this project anymore. I'm not trying to work in JQuery ^\_^'
 
-I'm rebuilding using Preact and Firestore.
+I'm rebuilding using [Preact](https://preactjs.com/) and [Firebase (Firestore, Auth)](https://firebase.google.com/).
 
 ## Getting Started
 

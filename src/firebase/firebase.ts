@@ -82,4 +82,4 @@ const deletePost = async (post_id) => {
 //delete posts
 //are you sure
 
-export { getPost, signIn };
+export { getPost, signIn, createUser };
