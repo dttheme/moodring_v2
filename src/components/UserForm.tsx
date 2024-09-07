@@ -1,8 +1,9 @@
-import { signIn } from "../firebase/firebase";
 import { useState } from "preact/hooks";
-export function UserForm({ handleSubmit }) {
+
+export function UserForm({ handleSubmit, btnValue }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [formError, setFormError] = useState("");
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -12,12 +13,16 @@ export function UserForm({ handleSubmit }) {
   };
 
   const handleForm = (e) => {
-    e.preventDefault();
-    handleSubmit(email, password);
+    return handleSubmit(email, password).catch((err) => {
+      console.log(err);
+      setFormError(err.message);
+      e.preventDefault();
+    });
   };
 
   return (
-    <form onSubmit={handleForm}>
+    <form id="userForm">
+      <div style={{ color: "red" }}>{formError ? { formError } : null}</div>
       <label htmlFor="email">Email </label>
       <input
         type="email"
@@ -36,7 +41,12 @@ export function UserForm({ handleSubmit }) {
         onChange={handlePassword}
       />
       <br />
-      <input type="button" value="Login" />
+      <input
+        form="userForm"
+        type="button"
+        value={btnValue}
+        onClick={handleForm}
+      />
     </form>
   );
 }

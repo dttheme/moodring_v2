@@ -1,18 +1,23 @@
-import { Route } from "preact-iso";
+import { useLocation } from "preact-iso";
 import { UserForm } from "../../components/UserForm";
-import { signIn } from "../../firebase/firebase";
+import { signIn } from "../../firebase/auth";
+import { getUser } from "../../firebase/firestore";
 
 export function Login() {
+  const location = useLocation();
+
   const handleLogin = (email, password) => {
-    // e.preventDefault();
-    return signIn(email, password).then(() => {
-      console.log("loading, set user_id in context, then we send to dashboard");
-    });
+    return signIn(email, password)
+      .then((user) => getUser(user.user.uid))
+      .then(() => {
+        location.route("/dashboard");
+      });
   };
+
   return (
     <div>
       <h2>Login</h2>
-      <UserForm handleSubmit={handleLogin} />
+      <UserForm handleSubmit={handleLogin} btnValue={"Login"} />
       <a href="/signup">Sign Up</a>
     </div>
   );
